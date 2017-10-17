@@ -390,7 +390,7 @@ export default class BaseTexture extends EventEmitter
             //   "The value of `complete` can thus change while a script is executing."
             // So complete needs to be re-checked after the callbacks have been added..
             // NOTE: complete will be true if the image has no src so best to check if the src is set.
-            if (source.complete && source.src)
+            if (source.complete)
             {
                 // ..and if we're complete now, no need for callbacks
                 source.onload = null;
