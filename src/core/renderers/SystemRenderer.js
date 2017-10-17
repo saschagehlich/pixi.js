@@ -201,7 +201,7 @@ export default class SystemRenderer extends EventEmitter
      */
     get width()
     {
-        return this.view.width;
+        return this.options.width || this.view.width;
     }
 
     /**
@@ -213,7 +213,7 @@ export default class SystemRenderer extends EventEmitter
      */
     get height()
     {
-        return this.view.height;
+        return this.options.height || this.view.height;
     }
 
     /**

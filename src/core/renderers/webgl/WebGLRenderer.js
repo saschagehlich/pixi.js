@@ -157,7 +157,9 @@ export default class WebGLRenderer extends SystemRenderer
             validateContext(this.options.context);
         }
 
-        this.gl = this.options.context || glCore.createContext(this.view, this._contextOptions);
+        const { width, height } = this.options || this.view
+        this.gl = this.options.context ||
+            glCore.createContext(this.view, this._contextOptions, width, height);
 
         this.CONTEXT_UID = CONTEXT_UID++;
 
