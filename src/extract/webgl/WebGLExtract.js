@@ -164,7 +164,7 @@ export default class WebGLExtract
      *  to convert. If left empty will use use the main renderer
      * @return {Uint8ClampedArray} One-dimensional array containing the pixel data of the entire texture
      */
-    pixels(target)
+    pixels(target, buffer)
     {
         const renderer = this.renderer;
         let textureBuffer;
@@ -205,7 +205,7 @@ export default class WebGLExtract
         const width = frame.width * resolution;
         const height = frame.height * resolution;
 
-        const webglPixels = new Uint8Array(BYTES_PER_PIXEL * width * height);
+        const webglPixels = buffer || new Uint8Array(BYTES_PER_PIXEL * width * height);
 
         if (textureBuffer)
         {
