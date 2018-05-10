@@ -47,15 +47,6 @@
     "postversion": "npm run clean && npm run build && npm run lib && npm run unit-test",
     "postpublish": "git push && git push --tags"
   },
-  "files": [
-    "dist/",
-    "src/",
-    "lib/",
-    "CONTRIBUTING.md",
-    "LICENSE",
-    "package.json",
-    "README.md"
-  ],
   "dependencies": {
     "bit-twiddle": "^1.0.2",
     "earcut": "^2.1.3",
