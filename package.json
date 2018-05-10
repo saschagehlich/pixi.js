@@ -49,6 +49,7 @@
   },
   "files": [
     "dist/",
+    "src/",
     "lib/",
     "CONTRIBUTING.md",
     "LICENSE",
